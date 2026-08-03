@@ -73,7 +73,7 @@
 <!-- HEADER -->
 <header class="header" id="mainHeader">
   <div class="header-inner">
-    <a href="/index.html" class="logo">
+    <a href="/" class="logo">
       <div class="logo-icon"><picture>
   <source srcset="/assets/webp/logo.webp" type="image/webp">
   <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
@@ -82,7 +82,7 @@
       </span>
     </a>
     <nav class="nav">
-      <a href="/index.html">Home</a>
+      <a href="/">Home</a>
       <a href="/shop.html">Shop</a>
       <a href="/blog.html">Blog</a>
       <a href="/reviews.html">Reviews</a>
@@ -101,7 +101,7 @@
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-    <a href="/index.html">Home</a>
+    <a href="/">Home</a>
     <a href="/shop.html">Shop</a>
     <a href="/blog.html">Blog</a>
     <a href="/reviews.html">Reviews</a>
@@ -120,7 +120,7 @@
     <!-- TIMER -->
     <p style="margin-bottom:32px;margin-top:32px;font-size:0.82rem;color:var(--text-light)">
       Redirecting to homepage in <strong id="countdown" style="color:var(--primary)">15</strong> seconds…
-      <a href="/index.html" style="color:var(--primary);font-weight:600;margin-left:4px">Go Now →</a>
+      <a href="/" style="color:var(--primary);font-weight:600;margin-left:4px">Go Now →</a>
     </p>
   </div>
 </main>
@@ -157,7 +157,7 @@
     <div class="footer-col">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="/index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/shop.html">Shop</a></li>
         <li><a href="/blog.html">Blog</a></li>
         <li><a href="/about.html">About Us</a></li>
@@ -207,7 +207,7 @@ const countEl = document.getElementById('countdown');
 const timer = setInterval(()=>{
   count--;
   if(countEl) countEl.textContent = count;
-  if(count<=0){clearInterval(timer);window.location.href='index.html';}
+  if(count<=0){clearInterval(timer);window.location.href='';}
 },1000);
 </script>
 
