@@ -1,0 +1,972 @@
+/* =============================================================
+   REVIEWS PAGE STYLES — EverydayBeautyProducts
+   Scope: only reviews.html loads this file.
+   All classes are prefixed with "ebprev-" so nothing here can
+   ever collide with style.css / blog.css / post.css classes.
+   Colors, fonts, radii, shadows all reuse the site's existing
+   CSS variables (--primary, --font-body, etc.) defined in
+   /assets/css/style.css, so light + dark mode both work for free.
+   Mobile-first: base rules = phone, then min-width breakpoints
+   scale up for tablet/desktop.
+   ============================================================= */
+
+/* ---------- 1. SUMMARY SECTION ---------- */
+.ebprev-summary-wrap {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+}
+
+/* Decorative blurred blobs — fill the empty side space on wide screens
+   without needing any extra content. Purely visual, theme-colored. */
+.ebprev-summary-wrap::before,
+.ebprev-summary-wrap::after {
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ebprev-summary-wrap::before {
+  top: -120px;
+  left: -120px;
+  background: radial-gradient(circle, var(--primary-light), transparent 70%);
+}
+
+.ebprev-summary-wrap::after {
+  bottom: -140px;
+  right: -120px;
+  background: radial-gradient(circle, var(--gold), transparent 70%);
+}
+
+.ebprev-summary {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.ebprev-summary-left,
+.ebprev-summary-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.ebprev-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 22px;
+  margin-top: 6px;
+  padding-bottom: 8px;
+}
+
+.ebprev-trust-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.ebprev-trust-strip-item i {
+  color: var(--primary);
+  font-size: 0.85rem;
+}
+
+.ebprev-summary-score {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.ebprev-summary-stars {
+  display: flex;
+  gap: 4px;
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.ebprev-summary-stars .ebprev-star-empty {
+  color: var(--border);
+}
+
+.ebprev-summary-count {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.ebprev-summary-bars {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ebprev-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.ebprev-bar-row span:first-child {
+  width: 32px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.ebprev-bar-track {
+  flex: 1;
+  height: 7px;
+  border-radius: 99px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.ebprev-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  transition: width 0.6s var(--ease);
+}
+
+.ebprev-write-btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border: none;
+  padding: 14px 30px;
+  border-radius: 99px;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ebprev-write-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ---------- 2. REVIEWS GRID ---------- */
+.ebprev-grid-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+}
+
+/* Pinterest-style masonry: CSS columns let cards of different heights
+   (some with a product photo, some without) flow naturally without
+   leaving gaps — exactly like a Pinterest board. */
+.ebprev-grid {
+  column-count: 1;
+  column-gap: 18px;
+}
+
+.ebprev-card {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin-bottom: 18px;
+  display: inline-block;
+  width: 100%;
+}
+
+.ebprev-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.ebprev-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.ebprev-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Reviewer identity — either an illustrated avatar image the reviewer
+   picked in the form, or an auto-generated initials circle as a
+   fallback for older entries with no avatarId. */
+.ebprev-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--accent);
+  background: var(--bg-soft);
+}
+
+.ebprev-avatar-fallback {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.ebprev-card-name {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.ebprev-card-date {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.ebprev-card-stars {
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.ebprev-card-stars .ebprev-star-empty {
+  color: var(--border);
+}
+
+.ebprev-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: var(--accent);
+  padding: 3px 9px;
+  border-radius: 99px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.ebprev-card-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Product photo the reviewer uploaded — rectangular, like a real
+   product shot, NOT a circular profile-style crop. */
+.ebprev-product-photo {
+  width: 100%;
+  margin-top: 14px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.ebprev-product-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 580px;
+  object-fit: cover;
+  display: block;
+}
+
+.ebprev-empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.ebprev-empty-state i {
+  font-size: 2rem;
+  color: var(--accent-2);
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ---------- 3. MODAL (Write a Review) ---------- */
+.ebprev-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Side rails: a vertical strip of mini review cards that auto-scrolls,
+   filling the empty space beside the modal on wide screens. Hidden by
+   default (mobile/tablet) — only enabled at the desktop breakpoint
+   below, and only ever rendered as flex there, so phones never load
+   the extra layout. */
+.ebprev-rail {
+  display: none;
+}
+
+@media (min-width: 1300px) {
+  .ebprev-rail {
+    display: block;
+    width: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 16px;
+    height: calc(100vh - 32px);
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%);
+  }
+
+  .ebprev-rail-track {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    animation: ebprev-rail-scroll 260s linear infinite;
+    will-change: transform;
+  }
+
+  .ebprev-rail-right .ebprev-rail-track {
+    animation-duration: 300s;
+    animation-direction: reverse;
+  }
+
+  /* Pause the motion when hovered — desktop only, as requested */
+  .ebprev-rail:hover .ebprev-rail-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes ebprev-rail-scroll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+  }
+
+  .ebprev-rail-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .ebprev-rail-card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .ebprev-rail-card-head .ebprev-avatar,
+  .ebprev-rail-card-head .ebprev-avatar-fallback {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .ebprev-rail-card-name {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text);
+  }
+
+  .ebprev-rail-card-stars {
+    color: var(--gold);
+    font-size: 0.7rem;
+  }
+
+  .ebprev-rail-card-stars .ebprev-star-empty {
+    color: var(--border);
+  }
+
+  .ebprev-rail-card-text {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.ebprev-modal-overlay.ebprev-open {
+  display: flex;
+}
+
+.ebprev-modal {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  max-width: 520px;
+  width: 100%;
+  margin: 24px auto;
+  padding: 28px 22px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  animation: ebprev-pop 0.25s var(--ease);
+}
+
+@keyframes ebprev-pop {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.ebprev-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--bg-soft);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ebprev-modal h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text);
+  margin: 0 0 6px;
+  padding-right: 30px;
+}
+
+.ebprev-modal-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.ebprev-field {
+  margin-bottom: 16px;
+}
+
+.ebprev-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.ebprev-field input[type="text"],
+.ebprev-field input[type="email"],
+.ebprev-field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.ebprev-field input:focus,
+.ebprev-field textarea:focus {
+  border-color: var(--primary);
+}
+
+.ebprev-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Star picker */
+.ebprev-star-picker {
+  display: flex;
+  gap: 6px;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.ebprev-star-picker button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--border);
+  padding: 2px;
+  transition: color 0.15s var(--ease), transform 0.15s var(--ease);
+}
+
+.ebprev-star-picker button:hover {
+  transform: scale(1.12);
+}
+
+.ebprev-star-picker button.ebprev-active {
+  color: var(--gold);
+}
+
+/* Photo upload */
+/* Product photo upload — rectangular preview, since this is a photo
+   of the PRODUCT being reviewed, not the reviewer's face. */
+.ebprev-photo-upload {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ebprev-photo-preview {
+  width: 90px;
+  height: 70px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px dashed var(--border);
+  flex-shrink: 0;
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+}
+
+.ebprev-photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ebprev-photo-preview.ebprev-has-image {
+  border-style: solid;
+  border-color: var(--accent-2);
+}
+
+.ebprev-photo-btn {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: var(--accent);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.ebprev-photo-btn:hover {
+  background: var(--accent-2);
+}
+
+.ebprev-photo-hint {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  margin-top: 6px;
+}
+
+.ebprev-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.ebprev-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.ebprev-check a {
+  color: var(--primary-dark);
+}
+
+/* Honeypot — hidden from real users, catches bots */
+.ebprev-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.ebprev-submit-btn {
+  width: 100%;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border: none;
+  padding: 14px;
+  border-radius: 99px;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  margin-top: 8px;
+  transition: opacity var(--transition);
+}
+
+.ebprev-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ebprev-turnstile-wrap {
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.ebprev-error-text {
+  font-size: 0.78rem;
+  color: #E53935;
+  margin-top: -8px;
+  margin-bottom: 14px;
+  display: none;
+}
+
+.ebprev-error-text.ebprev-show {
+  display: block;
+}
+
+/* Success state inside modal */
+.ebprev-success {
+  text-align: center;
+  padding: 20px 4px 4px;
+  display: none;
+}
+
+.ebprev-success.ebprev-show {
+  display: block;
+}
+
+.ebprev-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.ebprev-success h4 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.ebprev-success p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ebprev-success-close {
+  margin-top: 20px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--primary-dark);
+  background: var(--accent);
+  border: none;
+  padding: 11px 26px;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+/* ---------- 4. PAGINATION ---------- */
+.ebprev-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.ebprev-page-btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.ebprev-page-btn:hover:not(:disabled) {
+  border-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.ebprev-page-btn.ebprev-active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-color: transparent;
+  color: #fff;
+}
+
+.ebprev-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.ebprev-page-dots {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  padding: 0 2px;
+}
+
+/* ---------- 5. AVATAR PICKER (in the modal form) ---------- */
+.ebprev-avatar-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ebprev-avatar-opt {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg-soft);
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.ebprev-avatar-opt img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.ebprev-avatar-opt:hover {
+  transform: translateY(-2px);
+}
+
+.ebprev-avatar-opt.ebprev-active {
+  border-color: var(--primary);
+}
+
+/* ---------- 6. TRUST / AUTHENTICITY SECTION (below pagination) ---------- */
+.ebprev-trust-section {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ebprev-trust-inner {
+  margin: 0 auto;
+  padding: 44px 20px 0px 20px;
+}
+
+.ebprev-trust-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ebprev-trust-heading h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.ebprev-trust-heading p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ebprev-trust-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 34px;
+
+}
+
+.ebprev-trust-badge {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 14px;
+  text-align: center;
+  background: var(--bg-soft);
+}
+
+.ebprev-trust-badge i {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.ebprev-trust-badge h4 {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+
+.ebprev-trust-badge p {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------- 7. TABLET / DESKTOP ---------- */
+@media (min-width: 640px) {
+  .ebprev-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 700px) {
+  .ebprev-trust-badges {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .ebprev-summary {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 40px;
+    padding: 40px 44px;
+  }
+
+  .ebprev-summary-left {
+    align-items: flex-start;
+    text-align: left;
+    flex-shrink: 0;
+    gap: 10px;
+  }
+
+  .ebprev-summary-score {
+    font-size: 3.6rem;
+  }
+
+  .ebprev-summary-bars {
+    flex: 1;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .ebprev-summary-right {
+    align-items: flex-end;
+    text-align: right;
+    flex-shrink: 0;
+    gap: 16px;
+  }
+
+  .ebprev-trust-strip {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .ebprev-grid {
+    column-count: 3;
+    column-gap: 22px;
+  }
+
+  .ebprev-card {
+    margin-bottom: 22px;
+  }
+
+  .ebprev-modal {
+    padding: 34px 32px;
+  }
+}
+
+/* ---------- 7b. WIDE DESKTOP — use the extra side space instead of
+   leaving it empty; more review cards fill the row, and the summary
+   widens to match so the whole page feels consistent, not just the
+   grid. ---------- */
+@media (min-width: 1300px) {
+  .ebprev-summary,
+  .ebprev-grid-section,
+  .ebprev-trust-inner {
+    max-width: 1400px;
+  }
+
+  .ebprev-grid {
+    column-count: 4;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .ebprev-summary,
+  .ebprev-grid-section,
+  .ebprev-trust-inner {
+    max-width: 1600px;
+  }
+
+  .ebprev-grid {
+    column-count: 5;
+  }
+}

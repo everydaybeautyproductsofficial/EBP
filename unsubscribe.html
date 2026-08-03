@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsubscribed — EverydayBeautyProducts</title>
+<meta name="description" content="You have been unsubscribed from the EverydayBeautyProducts newsletter.">
+<meta name="author" content="EverydayBeautyProducts Editorial Team">
+<meta name="publisher" content="EverydayBeautyProducts">
+<meta name="copyright" content="© 2026 EverydayBeautyProducts. All rights reserved.">
+<meta name="robots" content="noindex, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#E91E63">
+<meta http-equiv="Content-Language" content="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" as="style">
+<link rel="preload" href="/assets/vendor/fontawesome/css/all.min.css" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+<noscript><link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css"></noscript>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-circle">
+    <div class="loader-logo-icon"><picture>
+  <source srcset="/assets/webp/logo.webp" type="image/webp">
+  <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
+</picture></div>
+  </div>
+</div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to improve your experience and show you relevant product recommendations. By continuing, you agree to our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+  <button class="cookie-btn" onclick="acceptCookies()">Accept All</button>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" onclick="closeSearch(event)">
+  <div style="width:100%;max-width:640px;margin:0 24px;position:relative;display:flex;flex-direction:column;align-items:center;">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass" style="font-size:1.1rem;padding:0 4px 0 8px;"></i>
+      <input type="text" placeholder="Search products, brands..." id="searchInput" oninput="handleSearch(this.value)" onkeydown="handleSearchKey(event)" autocomplete="off">
+      <button class="search-btn" onclick="performSearch()">Search</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <a href="/index.html" class="logo">
+      <div class="logo-icon"><picture>
+  <source srcset="/assets/webp/logo.webp" type="image/webp">
+  <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
+</picture></div>
+      <span class="logo-text"><span>Everyday</span><span class="highlight">Beauty</span><span>Products</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="/index.html">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/reviews.html">Reviews</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact Us</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-icon" onclick="openSearch()" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+    <a href="/index.html">Home</a>
+    <a href="/shop.html">Shop</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/reviews.html">Reviews</a>
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+</div>
+
+<main class="error-page">
+  <div class="error-bg-shape"></div>
+  <div class="error-bg-shape"></div>
+  <div class="error-inner">
+    <div style="font-size:clamp(3rem, 10vw, 4.5rem);color:var(--primary);margin-bottom:20px;"><i class="fa-solid fa-circle-check"></i></div>
+    <h1 class="error-title">You've Been Unsubscribed</h1>
+    <p class="error-subtitle" id="unsubMessage">You will no longer receive our newsletter emails. If this was a mistake, you're welcome to subscribe again any time.</p>
+    <a href="/index.html" style="color:var(--primary);font-weight:600;">Back to Homepage →</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-icon"><picture>
+  <source srcset="/assets/webp/logo.webp" type="image/webp">
+  <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
+</picture></div>
+        <span>Everyday<span class="beauty-text">Beauty</span>Products</span>
+      </div>
+      <p class="footer-desc">Your trusted guide to discovering the best everyday beauty products. Expert reviews, honest recommendations, and curated picks from across Amazon.</p>
+      <div class="social-links">
+        <a href="https://www.pinterest.com/everydaybeautyproducts/" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+	      <a href="https://www.instagram.com/everyday_beautyproducts/" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+	      <a href="https://www.facebook.com/everydaybeautyproductsofficial/" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="/category/skin-care.html">Skin Care</a></li>
+        <li><a href="/category/makeup.html">Makeup</a></li>
+        <li><a href="/category/hair-care.html">Hair Care</a></li>
+        <li><a href="/category/fragrance.html">Fragrance</a></li>
+        <li><a href="/category/foot-hand-nail.html">Foot, Hand & Nail</a></li>
+        <li><a href="/category/personal-care.html">Personal Care</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="/blog/how-to-start-affiliate-marketing-with-no-money.html">Free Blueprint</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="/disclosure.html">Disclosure Policy</a></li>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms & Conditions</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h3>Newsletter</h3>
+      <p style="font-size:0.8rem;margin-bottom:12px;color:rgba(255,255,255,0.6);">Get the latest beauty deals and reviews.</p>
+      <label for="footerEmail" class="sr-only">Email address</label>
+      <input type="email" placeholder="Your email address" id="footerEmail">
+      <div class="hp-field" aria-hidden="true"><label for="hp_footer">Website</label><input type="text" id="hp_footer" tabindex="-1" autocomplete="off"></div>
+      <button onclick="footerSubscribe()">Subscribe</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="currentYear"></span> EverydayBeautyProducts. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="/disclosure.html">Disclosure Policy</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms & Conditions</a>
+      <a href="/contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="amazon-disclosure">
+    <strong>Affiliate Disclosure:</strong> As an Amazon Associate, EverydayBeautyProducts earns from qualifying purchases. When you click on product links and make a purchase, we may receive a small commission at no extra cost to you. This helps us maintain the website and continue providing free, honest reviews. All opinions expressed are our own.
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+  // If the unsubscribe link included ?email=..., show it in the message.
+  // Uses textContent (not innerHTML) so this is safe even if the query
+  // string contains HTML/script characters.
+  (function () {
+    const email = new URLSearchParams(window.location.search).get('email');
+    if (email) {
+      const el = document.getElementById('unsubMessage');
+      if (el) el.textContent = `${email} will no longer receive our newsletter emails. If this was a mistake, you're welcome to subscribe again any time.`;
+    }
+  })();
+</script>
+
+<!-- EmailJS SDK: powers the newsletter forms' automatic email sending -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

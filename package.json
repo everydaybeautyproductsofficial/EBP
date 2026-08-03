@@ -1,0 +1,12 @@
+{
+  "name": "everyday-beauty-products",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-seo.mjs && node scripts/build-blog-seo.mjs && node scripts/build-review-schema.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

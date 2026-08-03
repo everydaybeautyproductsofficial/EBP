@@ -1,0 +1,36 @@
+name: Auto-update review schema
+
+# Runs automatically whenever you edit reviews-data.js (i.e. whenever you
+# manually add a newly-verified review) and push to GitHub. Can also be
+# triggered manually from the Actions tab ("Run workflow" button).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/js/reviews-data.js"
+      - "scripts/build-review-schema.mjs"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run review schema build script
+        run: node scripts/build-review-schema.mjs
+
+      - name: Commit updated reviews.html (if anything changed)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-update review schema [skip ci]"
+          file_pattern: "reviews.html"

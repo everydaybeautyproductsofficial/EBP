@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Blog & Expert Reviews — EverydayBeautyProducts</title>
+<meta name="description" content="In-depth skincare guides, makeup tutorials, fragrance reviews, and expert beauty recommendations.">
+<meta name="author" content="EverydayBeautyProducts Editorial Team">
+<meta name="publisher" content="EverydayBeautyProducts">
+<meta name="copyright" content="© 2026 EverydayBeautyProducts. All rights reserved.">
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#E91E63">
+<link rel="canonical" href="https://everydaybeautyproducts.com/blog.html">
+<meta http-equiv="Content-Language" content="en">
+<meta property="og:title" content="Beauty Blog & Expert Reviews — EverydayBeautyProducts">
+<meta property="og:description" content="In-depth skincare guides, makeup tutorials, fragrance reviews, and expert beauty recommendations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://everydaybeautyproducts.com/blog.html">
+<meta property="og:site_name" content="EverydayBeautyProducts">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://everydaybeautyproducts.com/assets/images/web/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beauty Blog & Expert Reviews — EverydayBeautyProducts">
+<meta name="twitter:description" content="In-depth skincare guides, makeup tutorials, fragrance reviews, and expert beauty recommendations.">
+<meta name="twitter:image" content="https://everydaybeautyproducts.com/assets/images/web/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" as="style">
+<link rel="preload" href="/assets/vendor/fontawesome/css/all.min.css" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+<noscript><link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css"></noscript>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://everydaybeautyproducts.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://everydaybeautyproducts.com/blog.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "EverydayBeautyProducts Blog",
+  "url": "https://everydaybeautyproducts.com/blog.html",
+  "description": "In-depth skincare guides, makeup routine, fragrance reviews, and expert beauty recommendations.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "EverydayBeautyProducts",
+    "url": "https://everydaybeautyproducts.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://everydaybeautyproducts.com/favicon.png"
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-circle">
+    <div class="loader-logo-icon"><picture>
+  <source srcset="/assets/webp/logo.webp" type="image/webp">
+  <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
+</picture></div>
+  </div>
+</div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to improve your experience and show you relevant product recommendations. By continuing, you agree to our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+  <button class="cookie-btn" onclick="acceptCookies()">Accept All</button>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" onclick="closeSearch(event)">
+  <div style="width:100%;max-width:640px;margin:0 24px;position:relative;display:flex;flex-direction:column;align-items:center;">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass" style="font-size:1.1rem;padding:0 4px 0 8px;"></i>
+      <input type="text" placeholder="Search products, brands..." id="searchInput" oninput="handleSearch(this.value)" onkeydown="handleSearchKey(event)" autocomplete="off">
+      <button class="search-btn" onclick="performSearch()">Search</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <a href="/index.html" class="logo">
+      <div class="logo-icon"><picture>
+  <source srcset="/assets/webp/logo.webp" type="image/webp">
+  <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
+</picture></div>
+      <span class="logo-text"><span>Everyday</span><span class="highlight">Beauty</span><span>Products</span></span>
+    </a>
+    <nav class="nav">
+      <a href="/index.html">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/blog.html" class="active">Blog</a>
+      <a href="/reviews.html">Reviews</a>
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact Us</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-icon" onclick="openSearch()" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="/index.html">Home</a>
+  <a href="/shop.html">Shop</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/reviews.html">Reviews</a>
+  <a href="/about.html">About Us</a>
+  <a href="/contact.html">Contact Us</a>
+</div>
+
+<!-- AFFILIATE DISCLOSURE (top-of-page, short version — full policy in footer) -->
+<div class="top-disclosure">
+  <i class="fa-solid fa-circle-info"></i> This page contains affiliate links. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you. <a href="/disclosure.html">Learn more</a>.
+</div>
+
+<!-- HERO -->
+<section class="bp-hero" aria-labelledby="bpHeroTitle">
+  <div class="bp-hero-inner">
+    <div class="bp-eyebrow" aria-hidden="true"><span><picture>
+  <source srcset="/assets/webp/logo.webp" type="image/webp">
+  <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
+</picture></span> Expert Beauty Reviews</div>
+    <h1 class="bp-hero-title" id="bpHeroTitle">Beauty <em>Blog</em> & Reviews</h1>
+    <p class="bp-hero-sub">In-depth guides, honest reviews, and expert tips across skincare, makeup, fragrance, and more — updated weekly.</p>
+    <div class="bp-search-row" role="search">
+      <label for="bpSearchInput" class="bp-sr-only">Search articles</label>
+      <input class="bp-search-input" type="search" id="bpSearchInput" placeholder="Search articles…" autocomplete="off">
+      <button class="bp-search-btn" id="bpSearchBtn">
+        <span class="bp-btn-text">Search</span>
+        <i class="bp-btn-icon fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS BAR -->
+<div class="bp-status-bar" id="bpStatusBar" role="status" aria-live="polite"></div>
+
+<!-- CATEGORY STRIP -->
+<div class="bp-cat-strip" role="tablist" aria-label="Filter by category">
+  <div class="bp-cat-inner" id="bpCatStrip"></div>
+</div>
+
+<!-- MAIN -->
+<main id="bpMain">
+  <section class="bp-section">
+    <div class="bp-inner">
+      <div class="bp-layout">
+
+        <!-- CONTENT COLUMN -->
+        <div>
+          <!-- FEATURED -->
+          <a class="bp-featured reveal" id="bpFeatured" href="#" aria-label="Featured article"></a>
+
+          <!-- GRID HEADER -->
+          <div class="bp-grid-header">
+            <h2 class="bp-grid-title" id="bpGridTitle">Latest Articles</h2>
+            <span class="bp-grid-count" id="bpGridCount"></span>
+          </div>
+
+          <!-- CARDS GRID -->
+          <div class="bp-grid" id="bpGrid" role="list" aria-labelledby="bpGridTitle"></div>
+
+          <!-- PAGINATION -->
+          <nav class="bp-pagination" id="bpPagination" aria-label="Pagination"></nav>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="bp-sidebar" aria-label="Blog sidebar">
+
+          <div class="bp-widget">
+            <h3 class="bp-widget-title">Popular Posts</h3>
+            <div class="bp-pop-list" id="bpPopular"></div>
+          </div>
+
+          <div class="bp-widget">
+            <h3 class="bp-widget-title">Newsletter</h3>
+            <p class="bp-news-note">Weekly beauty tips and exclusive deals — completely free.</p>
+            <input class="bp-news-input" type="email" id="bpSideEmail" placeholder="Your email address" aria-label="Newsletter email">
+            <div class="hp-field" aria-hidden="true"><label for="hp_blog_sidebar">Website</label><input type="text" id="hp_blog_sidebar" tabindex="-1" autocomplete="off"></div>
+            <button class="bp-news-btn" id="bpSideSubBtn">Subscribe Free</button>
+          </div>
+
+
+          <div class="bp-widget">
+            <h3 class="bp-widget-title">Popular Tags</h3>
+            <div class="bp-tags-cloud" id="bpTagsCloud"></div>
+          </div>
+
+          <div class="bp-widget">
+            <h3 class="bp-widget-title">Categories</h3>
+            <div class="bp-side-cats" id="bpSideCats"></div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-icon"><picture>
+  <source srcset="/assets/webp/logo.webp" type="image/webp">
+  <img src="/assets/images/logo.png" alt="EverydayBeautyProducts Logo">
+</picture></div>
+        <span>Everyday<span class="beauty-text">Beauty</span>Products</span>
+      </div>
+      <p class="footer-desc">Your trusted guide to discovering the best everyday beauty products. Expert reviews, honest recommendations, and curated picks from across Amazon.</p>
+      <div class="social-links">
+        <a href="https://www.pinterest.com/everydaybeautyproducts/" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/everyday_beautyproducts/" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/everydaybeautyproductsofficial/" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="/category/skin-care.html">Skin Care</a></li>
+        <li><a href="/category/makeup.html">Makeup</a></li>
+        <li><a href="/category/hair-care.html">Hair Care</a></li>
+        <li><a href="/category/fragrance.html">Fragrance</a></li>
+        <li><a href="/category/foot-hand-nail.html">Foot, Hand & Nail</a></li>
+        <li><a href="/category/personal-care.html">Personal Care</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="/blog/how-to-start-affiliate-marketing-with-no-money.html">Free Blueprint</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="/disclosure.html">Disclosure Policy</a></li>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms & Conditions</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h3>Newsletter</h3>
+      <p style="font-size:.8rem;margin-bottom:12px;color:rgba(255,255,255,0.6);">Get the latest beauty deals and reviews.</p>
+      <label for="footerEmail" class="sr-only">Email address</label>
+      <input type="email" placeholder="Your email address" id="footerEmail">
+      <div class="hp-field" aria-hidden="true"><label for="hp_footer">Website</label><input type="text" id="hp_footer" tabindex="-1" autocomplete="off"></div>
+      <button onclick="footerSubscribe()">Subscribe</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="currentYear"></span> EverydayBeautyProducts. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="/disclosure.html">Disclosure Policy</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms & Conditions</a>
+      <a href="/contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="amazon-disclosure">
+    <strong>Affiliate Disclosure:</strong> As an Amazon Associate, EverydayBeautyProducts earns from qualifying purchases. When you click on product links and make a purchase, we may receive a small commission at no extra cost to you. This helps us maintain the website and continue providing free, honest reviews. All opinions expressed are our own.
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- main.js: dark mode, mobile nav, header scroll, search overlay, footer subscribe -->
+<!-- EmailJS SDK: powers the newsletter forms' automatic email sending -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="/assets/js/main.js"></script>
+
+<!-- blog.js: all blog page logic -->
+<script type="module" src="/assets/js/blog.js"></script>
+
+</body>
+</html>

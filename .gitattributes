@@ -1,0 +1,13 @@
+# Normalize line endings for everyone, regardless of OS/editor.
+# Git will store these as LF in the repo and convert to the local
+# OS convention on checkout only if explicitly needed (we don't need that here).
+
+* text=auto eol=lf
+
+# Binary files — never touch these (images, icons, fonts)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.woff binary
+*.woff2 binary

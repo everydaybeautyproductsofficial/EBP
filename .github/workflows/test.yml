@@ -1,0 +1,24 @@
+name: Run tests
+
+# Runs on every push and every pull request, to any branch — unlike
+# build-seo.yml (which only runs when product/blog data changes), tests
+# should run on EVERY change so a regression is caught no matter which
+# file broke it.
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run test suite
+        run: npm test

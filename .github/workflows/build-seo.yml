@@ -1,0 +1,62 @@
+name: Auto-update SEO product data
+
+# Runs automatically whenever product data, blog post data, or either
+# build script is edited. Can also be triggered manually from the
+# Actions tab ("Run workflow" button) — useful the first time, or any
+# time you just want to force a rebuild.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/js/products.js"
+      - "assets/js/posts.js"
+      - "scripts/build-seo.mjs"
+      - "scripts/build-blog-seo.mjs"
+      - "scripts/build-sitemap.mjs"
+      - "blog/**/*.html"
+      - "category/**/*.html"
+      - "contact.html"
+      - "reviews.html" 
+  workflow_dispatch: {}
+
+# Needed so the workflow is allowed to commit the updated HTML files
+# back into the repository.
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Full history (not the default shallow clone) so
+          # build-sitemap.mjs can read each page's real last-commit
+          # date via `git log`.
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run product SEO build script
+        run: node scripts/build-seo.mjs
+
+      - name: Run blog SEO build script
+        run: node scripts/build-blog-seo.mjs
+
+      - name: Run sitemap lastmod build script
+        run: node scripts/build-sitemap.mjs
+
+      - name: Commit updated pages (if anything changed)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-update SEO data [skip ci]"
+          # NOTE: every filename listed in OTHER_FAQ_PAGES inside
+          # scripts/build-blog-seo.mjs must also appear here — otherwise
+          # this action won't `git add` it, and build-blog-seo.mjs's
+          # changes to that page get silently discarded every run
+          # instead of being committed.
+          file_pattern: "shop.html category/*.html blog/*.html contact.html reviews.html sitemap.xml"

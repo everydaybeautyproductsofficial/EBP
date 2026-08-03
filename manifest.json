@@ -1,0 +1,22 @@
+{
+  "name": "EverydayBeautyProducts",
+  "short_name": "EBP",
+  "description": "Find the best skincare, makeup, fragrance, hair care, and personal care products with honest reviews & expert recommendations.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FCE4EC",
+  "theme_color": "#E91E63",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

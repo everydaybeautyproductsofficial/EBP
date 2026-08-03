@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block internal search result query strings from indexing
+Disallow: /*?q=
+
+# Block admin and private directories
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://everydaybeautyproducts.com/sitemap.xml
+
+# Crawl delay (optional — helps with server load)
+Crawl-delay: 1
