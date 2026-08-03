@@ -35,7 +35,7 @@ export function toWebP(src) {
 // Registered after 'load' so it never competes with the page's own
 // critical resources for bandwidth/CPU on first paint.
 // =============================================
-if ('serviceWorker' in navigator) {
+if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').catch((err) => {
       console.warn('Service worker registration failed:', err);
@@ -59,7 +59,7 @@ if ('serviceWorker' in navigator) {
 // so the banner works identically on every page, including shop.html and
 // the category pages that don't load main.js at all.
 // =============================================
-if ('serviceWorker' in navigator) {
+if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('message', (event) => {
     if (event.data?.type === 'EBP_UPDATE_AVAILABLE') showUpdateBanner();
   });
