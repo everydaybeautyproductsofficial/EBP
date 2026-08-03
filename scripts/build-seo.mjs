@@ -169,6 +169,7 @@ function buildItemListElements(pageProducts) {
       '@type': 'Product',
       name: p.name,
       image: `${SITE_URL}${p.img}`,
+      description: p.excerpt,
       brand: { '@type': 'Brand', name: p.brand },
       url: buildAffiliateLink(p.asin),
       // NOTE: no aggregateRating here on purpose. p.rating/p.reviews are
