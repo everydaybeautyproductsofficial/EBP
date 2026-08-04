@@ -38,6 +38,23 @@
 
 const rawPosts = [
 {
+  id: 7,
+  category: 'Skin Care',
+  href: '/blog/best-vitamin-c-serum-for-hyperpigmentation.html',
+  title: "Best Vitamin C Serum For Hyperpigmentation For Black Skin",
+  excerpt: "Discover the best vitamin C serum for hyperpigmentation, specially tested for melanin-rich and dark skin. Expert advice, top formulas, & safe application tips.",
+  author: 'Maya Rodriguez',
+  createdAt: '2026-08-04',
+  img: '/assets/images/blog/best-vitamin-c-serum-for-hyperpigmentation.jpg',
+  tags: [
+    'best vitamin c serum for hyperpigmentation',
+    'best vitamin c serum for black skin',
+    'best vitamin c serum dark skin',
+    'hyperpigmentation treatment',
+    'vitamin c dark spots'
+  ],
+},
+{
   id: 6,
   category: 'Fragrance',
   href: '/blog/best-perfume-for-summer-female-2026.html',
