@@ -38,6 +38,23 @@
 
 const rawPosts = [
 {
+  id: 8,
+  category: 'Makeup',
+  href: '/blog/how-to-clean-makeup-brushes.html',
+  title: 'How to Clean Makeup Brushes: A Simple, Sustainable Routine',
+  excerpt: 'Clean makeup brushes effortlessly at home. Use gentle shampoo in lukewarm water or rub bristles onto antibacterial soap to keep your brushes like new.',
+  author: 'Maya Rodriguez',
+  createdAt: '2026-08-05T10:00:00Z',
+  img: '/assets/images/blog/how-to-clean-makeup-brushes.jpg',
+  tags: [
+    'How to Clean Makeup Brushes',
+    'Castile Soap',
+    'Makeup Sponges',
+    'Brush Cleaning',
+    'Sustainable Beauty'
+  ],
+},
+{
   id: 7,
   category: 'Skin Care',
   href: '/blog/best-vitamin-c-serum-for-hyperpigmentation.html',
