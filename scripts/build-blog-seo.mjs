@@ -128,7 +128,7 @@ function replaceAttr(html, anchor, attr, newValue, fileLabel, fieldLabel) {
 }
 
 function injectHeadMeta(html, post, fileLabel) {
-  const fullTitle = `${post.title} — EverydayBeautyProducts`;
+  const fullTitle = post.title;;
   const esc = escapeHtml(post.title);
   const escExcerpt = escapeHtml(post.excerpt);
   const escFullTitle = escapeHtml(fullTitle);
