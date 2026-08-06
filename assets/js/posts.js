@@ -38,6 +38,22 @@
 
 const rawPosts = [
 {
+  id: 9,
+  category: 'Skin Care',
+  href: '/blog/best-cleansers-for-mature-skin.html',
+  title: 'Best Cleansers for Mature Skin Over 40, 50 & 60 — 2026 Guide',
+  excerpt: 'Find the best anti-aging face wash for your 40s, 50s, and 60s. Compare top-rated cleansing balms and gentle gel washes for dry, sensitive mature skin.',
+  author: 'Dr. Sarah Collins',
+  createdAt: '2026-08-06T10:00:00Z',
+  img: '/assets/images/blog/best-cleansers-for-mature-skin.jpg',
+  tags: [
+    'Best Cleansers for Mature Skin',
+    'Anti-Aging Skincare',
+    'Face Wash',
+    'Mature Skin Care'
+  ],
+},
+{
   id: 8,
   category: 'Makeup',
   href: '/blog/how-to-clean-makeup-brushes.html',
