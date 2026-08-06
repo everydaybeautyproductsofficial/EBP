@@ -38,6 +38,24 @@
 
 const rawPosts = [
 {
+  id: 10,
+  category: 'Hair Care',
+  href: '/blog/the-truth-about-hair-loss-glp-1.html',
+  title: 'The Truth About Hair Loss on GLP-1 Drugs',
+  excerpt: 'GLP-1 hair loss is more common than people admit. Here\'s what the new tirzepatide vs. semaglutide research actually shows, why it happens, and how to treat it.',
+  author: 'Maya Rodriguez',
+  createdAt: '2026-08-06T10:00:00Z',
+  img: '/assets/images/blog/the-truth-about-hair-loss-glp-1.jpg',
+  tags: [
+    'GLP-1 Hair Loss',
+    'Tirzepatide',
+    'Semaglutide',
+    'Zepbound',
+    'Ozempic',
+    'Hair Loss Treatment'
+  ],
+},
+{
   id: 9,
   category: 'Skin Care',
   href: '/blog/best-cleansers-for-mature-skin.html',
