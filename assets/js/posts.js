@@ -38,6 +38,28 @@
 
 const rawPosts = [
 {
+  id: 11,
+  category: 'Skin Care',
+  href: '/blog/best-everyday-beauty-products.html',
+  title: 'What Are the Best Everyday Beauty Products in the World',
+  excerpt: "Discover the top selling beauty products in the world including dermatologist-recommended skin care, Korean toner pads, The Ordinary Hyaluronic Acid 2% + B5.",
+  author: 'Dr. Sarah Collins',
+  createdAt: '2026-08-08T10:00:00Z',
+  img: '/assets/images/blog/best-everyday-beauty-products.jpg',
+  tags: [
+    'Best Everyday Beauty Products',
+    'Top Selling Beauty Products',
+    'Best Beauty Products 2026',
+    'Best Beauty Products of All Time',
+    'Top 10 Beauty Products',
+    'Viral Beauty Products 2026',
+    'Best Skin Care Products Name List',
+    'Dermatologist Recommended Skin Care',
+    'Skincare Routine',
+    'Skin Care'
+  ],
+},
+{
   id: 10,
   category: 'Hair Care',
   href: '/blog/the-truth-about-hair-loss-glp-1.html',
