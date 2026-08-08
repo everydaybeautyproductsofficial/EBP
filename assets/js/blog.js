@@ -49,7 +49,22 @@ const ALL_CATEGORIES = [
 
 const categories = ALL_CATEGORIES;
 
-const allTags = [...new Set(posts.flatMap(p => p.tags))].filter(Boolean);
+const INITIAL_TAGS_SHOWN = 30; // ← shuru mein kitne tags dikhane hain
+const MAX_TAGS_SHOWN      = 50; // ← "Show More" click k baad hard limit (is say aagay kabhi nahi)
+
+// Har tag kitni posts mein use hua, uska count nikalo
+const tagCounts = {};
+posts.forEach(p => (p.tags ?? []).forEach(t => {
+  if (!t) return;
+  tagCounts[t] = (tagCounts[t] || 0) + 1;
+}));
+
+// Sabse zyada use hone wale tags upar, phir hard-limit tak katt do
+const allTags = Object.keys(tagCounts)
+  .sort((a, b) => tagCounts[b] - tagCounts[a] || a.localeCompare(b))
+  .slice(0, MAX_TAGS_SHOWN);
+
+let tagsExpanded = false; // "Show More" click hua ya nahi
 
 // ── STATE ────────────────────────────────────
 let activeCat = 'all';
@@ -301,10 +316,15 @@ function renderTags() {
     el.closest('.bp-widget')?.remove();
     return;
   }
-  el.innerHTML = allTags.map(t =>
-    `<button class="bp-tag" data-tag="${esc(t)}">${esc(t)}</button>`
-  ).join('');
-  el.querySelectorAll('.bp-tag').forEach(btn => {
+
+  const visibleTags = tagsExpanded ? allTags : allTags.slice(0, INITIAL_TAGS_SHOWN);
+  const showBtn = !tagsExpanded && allTags.length > INITIAL_TAGS_SHOWN;
+
+  el.innerHTML =
+    visibleTags.map(t => `<button class="bp-tag" data-tag="${esc(t)}">${esc(t)}</button>`).join('') +
+    (showBtn ? `<button class="bp-tag bp-tag-more" id="bpTagsShowMore" type="button">Show More</button>` : '');
+
+  el.querySelectorAll('.bp-tag:not(.bp-tag-more)').forEach(btn => {
     btn.addEventListener('click', () => {
       searchQ = btn.dataset.tag;
       const inp = document.getElementById('bpSearchInput');
@@ -314,6 +334,14 @@ function renderTags() {
       updateStatusBar();
     });
   });
+
+  const moreBtn = document.getElementById('bpTagsShowMore');
+  if (moreBtn) {
+    moreBtn.addEventListener('click', () => {
+      tagsExpanded = true;
+      renderTags(); // dobara render, is baar hard-limit (40) tak, button hamesha ke liye gayab
+    });
+  }
 }
 
 // ── SIDEBAR CATEGORIES ───────────────────────
