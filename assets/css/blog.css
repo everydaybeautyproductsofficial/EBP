@@ -404,6 +404,16 @@
   border-color: var(--primary); color: var(--primary);
   background: var(--accent);
 }
+.bp-tag-more {
+  font-weight: 700;
+  border-color: var(--primary); 
+  color: #fff;
+  background: var(--primary);
+  width: 100%;
+}
+.bp-tag-more:hover {
+  background: var(--accent);
+}
 
 /* Newsletter */
 .bp-news-note { font-size: .83rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
