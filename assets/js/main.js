@@ -30,6 +30,7 @@ function injectProductSchema() {
   const items = products.slice(0, 5).map(p => ({
     "@type": "Product",
     "name": p.name,
+    "image": `https://everydaybeautyproducts.com${p.img}`,
     "brand": { "@type": "Brand", "name": p.brand },
     "description": p.excerpt,
     "offers": {
