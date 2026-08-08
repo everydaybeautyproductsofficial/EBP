@@ -38,6 +38,28 @@
 
 const rawPosts = [
 {
+  id: 12,
+  category: 'Fragrance',
+  href: '/blog/is-perfume-bad-for-your-hormones.html',
+  title: 'Is Perfume Bad for Your Hormones? What Science Says in 2026',
+  excerpt: "Is perfume bad for your hormones? Discover what science says about toxic fragrances, harmful perfume ingredients, and their effects on hormonal health.",
+  author: 'Maya Rodriguez',
+  createdAt: '2026-08-08T10:00:00Z',
+  img: '/assets/images/blog/is-perfume-bad-for-your-hormones.jpg',
+  tags: [
+    'Is Perfume Bad For Your Hormones',
+    'Perfume Hormone Disruptor',
+    'Perfume Endocrine Disruptor',
+    'Perfumes Without Endocrine Disruptors',
+    'Is Perfume Bad For Your Health',
+    'Is Perfume Bad For Your Lungs',
+    'Side Effects of Perfume on Skin',
+    'Perfume Hormones Female',
+    'Perfume Hormones Male',
+    'Fragrance'
+  ],
+},
+{
   id: 11,
   category: 'Skin Care',
   href: '/blog/best-everyday-beauty-products.html',
