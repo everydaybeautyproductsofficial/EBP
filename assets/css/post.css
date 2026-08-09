@@ -148,7 +148,7 @@ body { display: flex; flex-direction: column; min-height: 100vh; }
   font-size: 1.55rem;
   font-weight: 700;
   color: var(--text);
-  margin: 40px 0 14px;
+  margin: 0px 0 14px;
   padding-top: 6px;
   line-height: 1.3;
 }
@@ -157,7 +157,7 @@ body { display: flex; flex-direction: column; min-height: 100vh; }
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
-  margin: 28px 0 10px;
+  margin: 0px 0 10px;
 }
 #articleBody p {
   font-size: 0.97rem;
@@ -202,6 +202,7 @@ body { display: flex; flex-direction: column; min-height: 100vh; }
   background: linear-gradient(135deg, #FF9900, #FFB347);
   color: #232F3E;
   padding: 10px 22px;
+  margin-bottom: 18px;
   border-radius: var(--radius-sm);
   font-weight: 700;
   font-size: 0.85rem;
