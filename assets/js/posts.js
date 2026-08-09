@@ -38,6 +38,28 @@
 
 const rawPosts = [
 {
+  id: 13,
+  category: 'Personal Care',
+  href: '/blog/best-soap-for-contact-dermatitis.html',
+  title: 'Best Soap for Contact Dermatitis, Eczema & Psoriasis',
+  excerpt: "If your skin reacts easily, explore the best soaps for contact dermatitis, featuring gentle, fragrance free options for itching, rashes, eczema, and psoriasis.",
+  author: 'Maya Rodriguez',
+  createdAt: '2026-08-09T10:00:00Z',
+  img: '/assets/images/blog/best-soap-for-contact-dermatitis.jpg',
+  tags: [
+    'Best Soaps For Contact Dermatitis',
+    'Best Soap For Dermatitis',
+    'Best Soap For Eczema',
+    'Is Dove Soap Good For Eczema',
+    'Zinc Soap For Eczema',
+    'Fragrance-Free Soap',
+    'Sensitive Skin Body Wash',
+    'Dermatologist Recommended Soap',
+    'Soap For Itching And Rashes',
+    'Personal Care'
+  ],
+},
+{
   id: 12,
   category: 'Fragrance',
   href: '/blog/is-perfume-bad-for-your-hormones.html',
