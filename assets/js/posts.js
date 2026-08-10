@@ -43,7 +43,7 @@ const rawPosts = [
   href: '/blog/best-soap-for-contact-dermatitis.html',
   title: 'Best Soap for Contact Dermatitis, Eczema & Psoriasis',
   excerpt: "If your skin reacts easily, explore the best soaps for contact dermatitis, featuring gentle, fragrance free options for itching, rashes, eczema, and psoriasis.",
-  author: 'Maya Rodriguez',
+  author: 'Dr. Sarah Collins',
   createdAt: '2026-08-09T10:00:00Z',
   img: '/assets/images/blog/best-soap-for-contact-dermatitis.jpg',
   tags: [
@@ -65,7 +65,7 @@ const rawPosts = [
   href: '/blog/is-perfume-bad-for-your-hormones.html',
   title: 'Is Perfume Bad for Your Hormones? What Science Says in 2026',
   excerpt: "Is perfume bad for your hormones? Discover what science says about toxic fragrances, harmful perfume ingredients, and their effects on hormonal health.",
-  author: 'Maya Rodriguez',
+  author: 'Dr. Sarah Collins',
   createdAt: '2026-08-08T10:00:00Z',
   img: '/assets/images/blog/is-perfume-bad-for-your-hormones.jpg',
   tags: [
@@ -160,7 +160,7 @@ const rawPosts = [
   href: '/blog/best-vitamin-c-serum-for-hyperpigmentation.html',
   title: "Best Vitamin C Serum For Hyperpigmentation For Black Skin",
   excerpt: "Discover the best vitamin C serum for hyperpigmentation, specially tested for melanin-rich and dark skin. Expert advice, top formulas, & safe application tips.",
-  author: 'Maya Rodriguez',
+  author: 'Dr. Sarah Collins',
   createdAt: '2026-08-04',
   img: '/assets/images/blog/best-vitamin-c-serum-for-hyperpigmentation.jpg',
   tags: [
@@ -177,7 +177,7 @@ const rawPosts = [
   href: '/blog/best-perfume-for-summer-female-2026.html',
   title: 'Best Perfume for Summer Female 2026 – Top 10 Picks',
   excerpt: "Discover the best perfume for summer female 2026 — top 10 women's fragrances, new releases for her, and long-lasting scents reviewed with honest insight.",
-  author: 'Maya Rodriguez',
+  author: 'Dr. Sarah Collins',
   createdAt: '2026-08-03T10:00:00Z',
   img: '/assets/images/blog/best-perfume-for-summer-female-2026.jpg',
   tags: [
