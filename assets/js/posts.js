@@ -161,7 +161,7 @@ const rawPosts = [
   title: "Best Vitamin C Serum For Hyperpigmentation For Black Skin",
   excerpt: "Discover the best vitamin C serum for hyperpigmentation, specially tested for melanin-rich and dark skin. Expert advice, top formulas, & safe application tips.",
   author: 'Dr. Sarah Collins',
-  createdAt: '2026-08-04',
+  createdAt: '2026-08-04T10:00:00Z',
   img: '/assets/images/blog/best-vitamin-c-serum-for-hyperpigmentation.jpg',
   tags: [
     'best vitamin c serum for hyperpigmentation',
