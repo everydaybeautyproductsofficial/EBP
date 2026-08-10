@@ -1,27 +1,6 @@
 // =============================================
 // POSTS.JS – All blog posts
 // To add a post: copy any block below,
-// paste before the last ]; and fill in your details.
-  // -----------------------------------------------
-  // ADD NEW POSTS ABOVE THIS LINE
-  // Copy the block below, paste above, and fill in:
-  // -----------------------------------------------
-  // {
-  //   id: 7, category: 'Skin Care',
-  //   href: '/blog/anti-aging.html',
-  //   title: 'Your Post Title Here',
-  //   excerpt: 'Short summary shown on the blog listing page.',
-  //   author: 'Dr. Sarah Collins',
-  //   createdAt: '2026-06-13T10:00:00Z',
-  //   img: '/assets/images/blog/your-image.jpg',
-  //   tags: ['Tag1', 'Tag2'],
-  // },
-  // =============================================
-
-// NAYA BLOG POST ADD KARTE WAQT — CHECKLIST
-// Total 4 jagah touch karni hain:
-// =============================================
-//
 // 1) YAHIN POSTS.JS MEIN:
 //
 // 2) blog/tumhara-naya-post.html
@@ -37,6 +16,27 @@
 // =============================================
 
 const rawPosts = [
+{
+  id: 14,
+  category: 'Makeup',
+  href: '/blog/is-bad-to-sleep-with-makeup.html',
+  title: 'Is It Bad to Sleep With Makeup? Here’s What Happens',
+  excerpt: "Is it bad to sleep with makeup? Yes. Learn how leaving makeup on while you sleep can clog pores, trigger acne, cause eye irritation and premature aging.",
+  author: 'Maya Rodriguez',
+  createdAt: '2026-08-10T10:00:00Z',
+  img: '/assets/images/blog/is-bad-to-sleep-with-makeup.jpg',
+  tags: [
+    'Is Bad To Sleep With Makeup',
+    'Is It Bad To Sleep With Makeup On',
+    'Is It Bad To Sleep With Makeup On For One Night',
+    'Sleeping With Makeup On',
+    'Does Sleeping With Makeup Cause Acne',
+    'Is It Bad To Sleep With Eye Makeup On',
+    'Is It Bad To Sleep With Mascara On',
+    'Sleeping With Makeup On For 20 Years',
+    'Makeup'
+  ],
+},
 {
   id: 13,
   category: 'Personal Care',
