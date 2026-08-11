@@ -125,8 +125,8 @@ export function renderBlogCard(post) {
       <div class="blog-card-body">
         <div class="blog-meta">
           <div class="author-chip">
-            <div class="author-avatar">${esc((post.author || '').charAt(0))}</div>
-            <span><strong>${esc(post.author)}</strong></span>
+            <div class="author-avatar">${esc((post.author?.name ?? post.author ?? '').charAt(0))}</div>
+            <span><strong>${esc(post.author?.name ?? post.author)}</strong></span>
           </div>
           <span><i class="fa-regular fa-calendar"></i> ${date}</span>
         </div>
