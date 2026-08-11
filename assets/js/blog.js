@@ -28,7 +28,7 @@ const posts = rawPosts.map((p, i) => ({
     ? new Date(p.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
     : '',
   img:     p.img ?? '',
-  author:  p.author ?? 'S',
+  author:  p.author?.name ?? p.author ?? 'S',
   href:    p.href ?? '#',
   tags:    p.tags ?? [],
 }));
