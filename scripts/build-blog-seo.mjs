@@ -1,56 +1,5 @@
 /**
  * build-blog-seo.mjs
- * ─────────────────────────────────────────────────────────────────────────
- * Auto-generates the static (pre-JS) content for every blog/*.html page,
- * using the SAME post data the live site already uses (imported directly
- * from posts.js). This guarantees the static HTML always matches what
- * post-page.js would inject on load — nothing is re-typed or duplicated
- * by hand.
- *
- * What it does, per blog post page:
- *   1. Reads window.POST_ID from the page itself, looks that post up in
- *      posts.js, and fills in — directly in the raw HTML —
- *        - <title>, meta description, og:title/description, twitter tags
- *        - breadcrumb current-page text
- *        - category badge, <h1> title, excerpt
- *        - author name + avatar initial, formatted publish date
- *        - hero image src + alt
- *        - the BlogPosting and BreadcrumbList JSON-LD blocks
- *   2. So a visitor, a search engine, or a social-media link preview all
- *      see the real title/content immediately — without JavaScript
- *      needing to run first.
- *
- * SAFE TO RE-RUN ANY NUMBER OF TIMES:
- *   - Every field is located by its unique id/attribute (e.g.
- *     id="postTitle") and its *entire* current inner content is replaced,
- *     whether that's empty (first run) or already-correct data from a
- *     previous run.
- *   - JSON-LD blocks are parsed as real JSON (not string-matched) and
- *     written back, exactly like build-seo.mjs already does for products.
- *
- * The client-side script (post-page.js) still runs exactly as before —
- * it simply re-sets the same values on load. Nothing about the page's
- * interactivity changes; this script only makes the *static* HTML match
- * it from the start.
- *
- * HOW TO ADD A NEW BLOG POST
- * ────────────────────────────
- *   1. Copy an existing blog/*.html file, rename it, update its
- *      window.POST_ID to a new id.
- *   2. Add a matching entry to assets/js/posts.js (same id).
- *   3. Write the article body inside #articleBody as usual.
- *   4. Run this script (or just push — GitHub Actions runs it for you).
- *   That's it — title, excerpt, author, date, badge, hero image, and
- *   schema are all filled in automatically from posts.js.
- *
- * HOW TO RUN
- * ────────────
- *   node scripts/build-blog-seo.mjs
- *
- * This is also run automatically by GitHub Actions on every push that
- * touches assets/js/posts.js or any blog/*.html file — see
- * .github/workflows/build-seo.yml
- * ─────────────────────────────────────────────────────────────────────────
  */
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
@@ -86,7 +35,7 @@ function formatDate(iso) {
 }
 
 function authorInitial(author) {
-  const stripped = (author ?? '').replace(/^(dr|mr|ms|mrs|prof)\.?\s*/i, '').trim();
+  const stripped = (author?.name ?? '').replace(/^(dr|mr|ms|mrs|prof)\.?\s*/i, '').trim();
   return (stripped[0] ?? 'S').toUpperCase();
 }
 
@@ -147,7 +96,7 @@ function injectHeroSection(html, post, fileLabel) {
   const esc = escapeHtml(post.title);
   const escExcerpt = escapeHtml(post.excerpt);
   const escCategory = escapeHtml(post.category);
-  const escAuthor = escapeHtml(post.author);
+  const escAuthor = escapeHtml(post.author.name);
 
   html = replaceInner(html, '<span id="breadcrumbCurrent">', '</span>', esc, fileLabel, 'breadcrumb');
   html = replaceInner(html, '<div class="post-cat-badge" id="postCatBadge">', '</div>', `\u{1F338} ${escCategory}`, fileLabel, 'category badge');
@@ -186,7 +135,12 @@ function injectJsonLd(html, post, fileLabel) {
       obj.image = `${SITE_URL}${post.img}`;
       obj.datePublished = post.createdAt;
       obj.dateModified = post.createdAt;
-      obj.author = { '@type': 'Person', name: post.author };
+      obj.author = {
+        '@type': 'Person',
+        name: post.author.name,
+        url: post.author.url,
+        sameAs: post.author.sameAs,
+      };
       obj.url = `${SITE_URL}${post.href}`;
       obj.mainEntityOfPage = { '@type': 'WebPage', '@id': `${SITE_URL}${post.href}` };
       obj.articleSection = post.category;
