@@ -74,12 +74,12 @@ function injectPostMeta() {
   if (breadcrumbCurrent) breadcrumbCurrent.textContent = post.title;
 
   const authorName = document.getElementById('postAuthor');
-  if (authorName) authorName.textContent = post.author;
+  if (authorName) authorName.textContent = post.author?.name ?? post.author;
 
   const authorInitial = document.getElementById('authorInitial');
   if (authorInitial) {
     // Skip title prefixes (Dr., Mr., Ms., Prof.) and use first letter of actual first name
-    const nameParts = (post.author ?? '').replace(/^(dr|mr|ms|mrs|prof)\.?\s*/i, '').trim();
+    const nameParts = (post.author?.name ?? post.author ?? '').replace(/^(dr|mr|ms|mrs|prof)\.?\s*/i, '').trim();
     authorInitial.textContent = nameParts[0]?.toUpperCase() ?? 'S';
   }
 
