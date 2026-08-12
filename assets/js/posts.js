@@ -20,6 +20,30 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 16,
+  category: 'Personal Care',
+  href: '/blog/is-dove-soap-good-for-eczema.html',
+  title: 'Is Dove Soap Good for Eczema? Honest Review & Guide',
+  excerpt: "Is Dove soap good for eczema? See which Dove formulas are fragrance free and eczema friendly, plus dermatologist backed cleansing and moisturizing tips.",
+  author: AUTHORS.sarah,
+  createdAt: '2026-08-12T10:00:00Z',
+  img: '/assets/images/blog/is-dove-soap-good-for-eczema.jpg',
+  tags: [
+    'Is Dove Soap Good For Eczema',
+    'What Is The Best Soap To Treat Eczema',
+    'Do Dermatologists Really Recommend Dove Soap',
+    'Which Is Better For Sensitive Skin Dove Or Ivory',
+    'What Bar Soap Is Best For Eczema Prone Skin',
+    'Is Dove Soap Eczema Friendly',
+    'Is Dettol Soap Good For Eczema',
+    'Dove Soap',
+    'Eczema',
+    'Sensitive Skin',
+    'Personal Care',
+    'Skin Care'
+  ],
+},
+{
   id: 15,
   category: 'Hair Care',
   href: '/blog/is-head-and-shoulders-a-good-shampoo-for-dandruff.html',
