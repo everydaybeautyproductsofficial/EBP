@@ -20,6 +20,31 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 17,
+  category: 'Foot, Hand & Nail',
+  href: '/blog/why-are-my-hands-so-wrinkly-after-a-shower.html',
+  title: 'Why Are My Hands So Wrinkly After a Shower?',
+  excerpt: "Wondering why your hands get so wrinkly after a shower? Learn what causes pruney fingers, why it happens, and when the wrinkling could mean something else.",
+  author: AUTHORS.maya,
+  createdAt: '2026-08-13T10:00:00Z',
+  img: '/assets/images/blog/why-are-my-hands-so-wrinkly-after-a-shower.jpg',
+  tags: [
+    'Why Are My Hands So Wrinkly After A Shower',
+    'Does Pruney Hands Mean Dehydration',
+    'How Long Does It Take For Water Wrinkles To Go Away',
+    'Why Do My Hands Get So Pruney So Fast',
+    'At What Age Do Hands Go Wrinkly',
+    'Can Vitamin B12 Deficiency Cause Pruney Fingers',
+    'Are Wrinkled Fingers A Symptom Of Diabetes',
+    'When Should I Worry About Wrinkled Fingers',
+    'Wrinkly Hands',
+    'Pruney Fingers',
+    'Shower Wrinkles',
+    'Skin Care',
+    'Hand Care'
+  ],
+},
+{
   id: 16,
   category: 'Personal Care',
   href: '/blog/is-dove-soap-good-for-eczema.html',
