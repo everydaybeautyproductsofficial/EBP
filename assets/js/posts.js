@@ -40,7 +40,6 @@ const rawPosts = [
     'Wrinkly Hands',
     'Pruney Fingers',
     'Shower Wrinkles',
-    'Skin Care',
     'Hand Care'
   ],
 },
