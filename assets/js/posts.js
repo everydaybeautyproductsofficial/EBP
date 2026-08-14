@@ -25,7 +25,7 @@ const rawPosts = [
   href: '/blog/how-to-keep-hair-dye-off-skin-without-petroleum-jelly.html',
   title: 'How To Keep Hair Dye Off Skin Without Petroleum Jelly',
   excerpt: "Learn how to keep hair dye off skin without petroleum jelly using natural methods. Remove stains fast, even when dried, in just 2 minutes at home.",
-  author: AUTHORS.maya,
+  author: AUTHORS.sarah,
   createdAt: '2026-08-14T10:00:00Z',
   img: '/assets/images/blog/how-to-keep-hair-dye-off-skin-without-petroleum-jelly.jpg',
   tags: [
