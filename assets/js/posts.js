@@ -20,6 +20,31 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 18,
+  category: 'Hair Care',
+  href: '/blog/how-to-keep-hair-dye-off-skin-without-petroleum-jelly.html',
+  title: 'How To Keep Hair Dye Off Skin Without Petroleum Jelly',
+  excerpt: "Learn how to keep hair dye off skin without petroleum jelly using natural methods. Remove stains fast, even when dried, in just 2 minutes at home.",
+  author: AUTHORS.maya,
+  createdAt: '2026-08-14T10:00:00Z',
+  img: '/assets/images/blog/how-to-keep-hair-dye-off-skin-without-petroleum-jelly.jpg',
+  tags: [
+    'How To Keep Hair Dye Off Skin Without Petroleum Jelly',
+    'What Can I Use To Stop Hair Dye From Going On My Skin',
+    'What Gets Hair Dye Off Skin Naturally',
+    'Does Toothpaste Remove Hair Dye From Skin',
+    'How Long Until Hair Dye Comes Off Skin',
+    'Does Hair Dye Permanently Stain Skin',
+    'Is Hair Dye Bad For Your Skin',
+    'Does Baking Soda Remove Hair Dye',
+    'Does Vaseline Remove Hair Dye From Skin',
+    'Hair Dye',
+    'Hair Care',
+    'Skin Care',
+    'Petroleum Jelly Alternative'
+  ],
+},
+{
   id: 17,
   category: 'Foot, Hand & Nail',
   href: '/blog/why-are-my-hands-so-wrinkly-after-a-shower.html',
