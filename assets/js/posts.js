@@ -20,6 +20,30 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 21,
+  category: 'Hair Care',
+  href: '/blog/how-to-get-rid-of-oily-hair-without-dry-shampoo.html',
+  title: 'How To Get Rid Of Oily Hair Without Dry Shampoo',
+  excerpt: "How to get rid of oily hair without dry shampoo with natural alternatives, quick 5-minute fixes, styling tricks, and practical ways to refresh greasy roots.",
+  author: AUTHORS.maya,
+  createdAt: '2026-08-17T10:00:00Z',
+  img: '/assets/images/blog/how-to-get-rid-of-oily-hair-without-dry-shampoo.jpg',
+  tags: [
+    'How To Get Rid Of Oily Hair Without Dry Shampoo',
+    'How Can I Make My Hair Less Greasy In 5 Minutes',
+    'How To Quickly Get Oil Out Of Hair',
+    'How Do I Get Rid Of Oily Hair Without Shampoo',
+    'How To Get Rid Of Oily Hair Naturally',
+    'How To Fix Hair Getting Greasy After 1 Day',
+    'What Can I Replace Shampoo With',
+    'What Causes Oily Hair In Females',
+    'Is Greasy Hair A Symptom Of PCOS',
+    'Is Greasy Hair Unhealthy',
+    'Oily Hair',
+    'Hair Care'
+  ],
+},
+{
   id: 20,
   category: 'Hair Care',
   href: '/blog/sadie-sink-hair-and-eye-color.html',
