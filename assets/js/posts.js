@@ -20,6 +20,31 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 22,
+  category: 'Skin Care',
+  href: '/blog/how-to-use-baking-soda-for-skin-whitening-for-dark-spots.html',
+  title: 'How To Use Baking Soda For Skin Whitening For Dark Spots',
+  excerpt: "Learn how to use baking soda for skin whitening for dark spots, why it may irritate skin, and safer ways to fade hyperpigmentation.",
+  author: AUTHORS.sarah,
+  createdAt: '2026-08-18T10:00:00Z',
+  img: '/assets/images/blog/how-to-use-baking-soda-for-skin-whitening-for-dark-spots.jpg',
+  tags: [
+    'How To Use Baking Soda For Skin Whitening For Dark Spots',
+    'What Are The Potential Side Effects Of Using Baking Soda On The Face',
+    'Can Baking Soda Be Used For Skin Tightening',
+    'How Should Baking Soda Be Applied To The Face For Optimal Results',
+    'Is It Safe To Use Baking Soda On Your Skin Regularly',
+    'What Are The Techniques For Whitening Skin With Baking Soda',
+    'Will Baking Soda Lighten Dark Spots',
+    'What Is The Fastest Way To Lighten Dark Spots',
+    'What Is The Best Homemade Dark Spot Remover',
+    'Baking Soda',
+    'Dark Spots',
+    'Hyperpigmentation',
+    'Skin Care'
+  ],
+},
+{
   id: 21,
   category: 'Hair Care',
   href: '/blog/how-to-get-rid-of-oily-hair-without-dry-shampoo.html',
