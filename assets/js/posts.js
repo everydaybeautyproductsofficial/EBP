@@ -20,6 +20,28 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 23,
+  category: 'Fragrance',
+  href: '/blog/adidas-vibes-dream-glaze-fragrance-hair-body-mist.html',
+  title: 'Adidas Vibes Dream Glaze Fragrance Hair & Body Mist',
+  excerpt: "Adidas Vibes Dream Glaze Hair & Body Mist – is it discontinued? Find dupes, eau de parfum details, Amazon listings & original Adidas perfume for men.",
+  author: AUTHORS.maya,
+  createdAt: '2026-08-20T10:00:00Z',
+  img: '/assets/images/blog/adidas-vibes-dream-glaze-fragrance-hair-body-mist.jpg',
+  tags: [
+    'Adidas Vibes Dream Glaze Fragrance Hair And Body Mist',
+    'What Is The Best Selling Adidas Perfume',
+    'Are Adidas Perfumes Good',
+    'What Do Adidas Vibes Get Comfy Smell Like',
+    'Which Perfume Lasts 72 Hours',
+    'What Are The Best Perfumes For 2026',
+    'Adidas Fragrance',
+    'Gourmand Perfume',
+    'Body Mist',
+    'Fragrance'
+  ],
+},
+{
   id: 22,
   category: 'Skin Care',
   href: '/blog/how-to-use-baking-soda-for-skin-whitening-for-dark-spots.html',
