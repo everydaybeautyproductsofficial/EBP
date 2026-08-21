@@ -2,177 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Core Pages -->
   <url>
-    <loc>https://everydaybeautyproducts.com/</loc>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/shop.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/blog.html</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/reviews.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/about.html</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/contact.html</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Category Pages -->
-  <url>
-    <loc>https://everydaybeautyproducts.com/category/skin-care.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/category/makeup.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/category/hair-care.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/category/fragrance.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/category/foot-hand-nail.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/category/personal-care.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Legal Pages -->
-  <url>
-    <loc>https://everydaybeautyproducts.com/disclosure.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/privacy-policy.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/terms.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <!-- Blog Posts -->
-  <url>
-    <loc>https://everydaybeautyproducts.com/blog/ashley-tisdale-10-minute-beauty-routine.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/liposomal-vitamin-c.html</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/sadie-sink-red-hair-effect.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/adidas-vibes-dream-glaze-fragrance-hair-body-mist.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/hailey-bieber-opi-blue-nails.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/how-to-use-baking-soda-for-skin-whitening-for-dark-spots.html</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/best-hydrating-face-mist.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/how-to-get-rid-of-oily-hair-without-dry-shampoo.html</loc>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/how-to-use-oil-cleanser.html</loc>
-    <lastmod>2026-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/blog/best-perfume-for-summer-female-2026.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/blog/best-vitamin-c-serum-for-hyperpigmentation.html</loc>
+    <loc>https://everydaybeautyproducts.com/blog/sadie-sink-hair-and-eye-color.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/how-to-clean-makeup-brushes.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/cola-fragrance-perfume.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/best-cleansers-for-mature-skin.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/how-to-keep-hair-dye-off-skin-without-petroleum-jelly.html</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/the-truth-about-hair-loss-glp-1.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/why-are-my-hands-so-wrinkly-after-a-shower.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/best-everyday-beauty-products.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/is-dove-soap-good-for-eczema.html</loc>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/is-perfume-bad-for-your-hormones.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://everydaybeautyproducts.com/blog/best-soap-for-contact-dermatitis.html</loc>
+    <loc>https://everydaybeautyproducts.com/blog/is-head-and-shoulders-a-good-shampoo-for-dandruff.html</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -184,58 +69,172 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/is-head-and-shoulders-a-good-shampoo-for-dandruff.html</loc>
+    <loc>https://everydaybeautyproducts.com/blog/best-soap-for-contact-dermatitis.html</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/is-dove-soap-good-for-eczema.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <loc>https://everydaybeautyproducts.com/blog/is-perfume-bad-for-your-hormones.html</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/why-are-my-hands-so-wrinkly-after-a-shower.html</loc>
+    <loc>https://everydaybeautyproducts.com/blog/best-everyday-beauty-products.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/the-truth-about-hair-loss-glp-1.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/best-cleansers-for-mature-skin.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/how-to-clean-makeup-brushes.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/best-vitamin-c-serum-for-hyperpigmentation.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/best-perfume-for-summer-female-2026.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/how-to-use-oil-cleanser.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/best-hydrating-face-mist.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/hailey-bieber-opi-blue-nails.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/sadie-sink-red-hair-effect.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog/ashley-tisdale-10-minute-beauty-routine.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/terms.html</loc>
     <lastmod>2026-08-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/how-to-keep-hair-dye-off-skin-without-petroleum-jelly.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://everydaybeautyproducts.com/privacy-policy.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/cola-fragrance-perfume.html</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://everydaybeautyproducts.com/disclosure.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/sadie-sink-hair-and-eye-color.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <loc>https://everydaybeautyproducts.com/category/personal-care.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/how-to-get-rid-of-oily-hair-without-dry-shampoo.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://everydaybeautyproducts.com/category/foot-hand-nail.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/how-to-use-baking-soda-for-skin-whitening-for-dark-spots.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://everydaybeautyproducts.com/category/fragrance.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://everydaybeautyproducts.com/blog/adidas-vibes-dream-glaze-fragrance-hair-body-mist.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <loc>https://everydaybeautyproducts.com/category/hair-care.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/category/makeup.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/category/skin-care.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/contact.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/about.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/reviews.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/blog.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/shop.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://everydaybeautyproducts.com/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
 
 </urlset>
