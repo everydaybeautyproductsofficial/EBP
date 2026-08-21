@@ -20,6 +20,29 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 24,
+  category: 'Personal Care',
+  href: '/blog/liposomal-vitamin-c.html',
+  title: 'Dr. Mercola Liposomal Vitamin C 1000 mg, Benefits & Uses',
+  excerpt: "A detailed review of Dr. Mercola Liposomal Vitamin C, including its 1,000 mg serving, benefits, ingredients, safety considerations, and suggested use.",
+  author: AUTHORS.sarah,
+  createdAt: '2026-08-22T00:00:00Z',
+  img: '/assets/images/blog/liposomal-vitamin-c.jpg',
+  tags: [
+    'Liposomal Vitamin C',
+    'Dr Mercola Liposomal Vitamin C',
+    'Vitamin C Supplement',
+    'Liposomal Vitamin C 1000 Mg',
+    'What Does Taking Liposomal Vitamin C Do',
+    'Is Liposomal Vitamin C Actually Better',
+    'Who Shouldnt Take Liposomal Vitamin C',
+    'Can I Take Liposomal Vitamin C Every Day',
+    'What Are The Disadvantages Of Liposomal',
+    'What Is The Best Time To Take Liposomal Vitamin C',
+    'Personal Care'
+  ],
+},
+{
   id: 23,
   category: 'Fragrance',
   href: '/blog/adidas-vibes-dream-glaze-fragrance-hair-body-mist.html',
