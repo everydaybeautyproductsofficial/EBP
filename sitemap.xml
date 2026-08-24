@@ -3,6 +3,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
+    <loc>https://everydaybeautyproducts.com/blog/eos-body-mist.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://everydaybeautyproducts.com/blog/liposomal-vitamin-c.html</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
