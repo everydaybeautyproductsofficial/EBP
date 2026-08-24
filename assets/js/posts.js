@@ -20,6 +20,30 @@ const AUTHORS = {
 
 const rawPosts = [
 {
+  id: 25,
+  category: 'Fragrance',
+  href: '/blog/eos-body-mist.html',
+  title: 'Eos Body Mist Guide - Vanilla, Pink Champagne And More',
+  excerpt: "Discover eos body mist scents, ingredients, longevity, customer ratings, comparisons, and where to buy Vanilla Cashmere, Fresh & Cozy, and Pink Champagne.",
+  author: AUTHORS.maya,
+  createdAt: '2026-08-24T10:00:00Z',
+  img: '/assets/images/blog/eos-body-mist-complete-guide.jpg',
+  tags: [
+    'Eos Body Mist',
+    'Does Eos Make Body Mist',
+    'Does Eos Body Mist Work',
+    'Does The Eos Body Mist Last Long',
+    'Whats The Best Smelling Body Mist',
+    'How To Use Eos Body Mist',
+    'How Long Does Body Mist Usually Last',
+    'Vanilla Cashmere',
+    'Fresh And Cozy',
+    'Pink Champagne',
+    'Body Mist Review',
+    'Fragrance'
+  ],
+},
+{
   id: 24,
   category: 'Personal Care',
   href: '/blog/liposomal-vitamin-c.html',
