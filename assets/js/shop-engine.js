@@ -80,8 +80,9 @@ export function renderCard(p, isHighlighted = false) {
     ? ' style="outline:0.75px solid #ff5c8a;outline-offset:2px;border-radius:16px;position:relative;overflow:visible;"'
     : '';
   const highlightRibbon = isHighlighted
-    ? '<span style="position:absolute;top:50%;left:-10px;transform:translateY(-50%);white-space:nowrap;'
-      + 'background:#ff5c8a;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;'
+    ? '<span style="position:absolute;top:50%;left:-28px;transform:translateY(-50%) rotate(-90deg);white-space:nowrap;'
+      + 'display:inline-flex;align-items:center;line-height:1;'
+      + 'background:#ff5c8a;color:#fff;font-size:11px;font-weight:600;padding:6px 10px;'
       + 'border-radius:20px;z-index:3;box-shadow:0 1px 3px rgba(0,0,0,0.15);">You were looking for this</span>'
     : '';
 
