@@ -68,13 +68,24 @@ function skeletonCardHTML() {
 }
 
 // ─── Render a single product card (identical design) ─────────────────────
-export function renderCard(p) {
+// isHighlighted: true when this card is the ?pid= deep-link target — gets
+// a visible accent border/ribbon so an ad visitor immediately recognises
+// "this is the product the ad was about", instead of scanning every card.
+export function renderCard(p, isHighlighted = false) {
   const discount     = p.discount ? `-${p.discount}%` : '';
   const oldPriceHtml = p.oldPrice  ? `<span class="product-old-price">$${p.oldPrice.toFixed(2)}</span>` : '';
   const primeBadge   = p.prime     ? '<span class="prime-badge">prime</span>' : '';
   const discountBadge = discount   ? `<span class="discount-badge">${discount}</span>` : '';
+  const highlightStyle = isHighlighted
+    ? ' style="outline:3px solid #ff5c8a;outline-offset:2px;border-radius:16px;position:relative;"'
+    : '';
+  const highlightRibbon = isHighlighted
+    ? '<span style="position:absolute;top:8px;left:8px;background:#ff5c8a;color:#fff;font-size:11px;'
+      + 'font-weight:600;padding:3px 8px;border-radius:20px;z-index:2;">You were looking for this</span>'
+    : '';
 
-  return `<div class="product-card">
+  return `<div class="product-card" id="product-${p.id}"${highlightStyle}>
+    ${highlightRibbon}
     <div class="product-card-img-wrap">
       <picture>
         <source srcset="${esc(toWebP(p.img))}" type="image/webp">
@@ -131,6 +142,21 @@ export function initShopEngine({ pageCategory = 'all' } = {}) {
   let filteredProducts = [];
   const ITEMS_PER_PAGE = 24;
 
+  // ── Deep-link highlight (?pid=123 in the URL) ──────────────────────────
+  // Lets an ad (or any external link) point straight at one product: the
+  // matching card is pinned to the very top of the grid and briefly
+  // highlighted/scrolled-into-view on first load, instead of making the
+  // visitor hunt through the whole category page for it.
+  let highlightId = null;
+  let hasScrolledToHighlight = false;
+  {
+    const pidParam = new URLSearchParams(window.location.search).get('pid');
+    const pidNum = pidParam ? parseInt(pidParam, 10) : NaN;
+    if (!Number.isNaN(pidNum) && POOL.some(p => p.id === pidNum)) {
+      highlightId = pidNum;
+    }
+  }
+
   // ── Filter + sort ────────────────────────────────────────────────────
   function filterAndSortProducts() {
     let result = POOL.filter(p => {
@@ -154,6 +180,16 @@ export function initShopEngine({ pageCategory = 'all' } = {}) {
     else if (currentSort === 'newest') result.sort((a, b) => b.id - a.id);
     // 'popular' — keep original order
 
+    // Pin the ?pid= deep-link target to the front, whatever the sort/
+    // filter otherwise produced, so it's always the first thing visible.
+    if (highlightId !== null) {
+      const idx = result.findIndex(p => p.id === highlightId);
+      if (idx > 0) {
+        const [item] = result.splice(idx, 1);
+        result.unshift(item);
+      }
+    }
+
     return result;
   }
 
@@ -168,7 +204,7 @@ export function initShopEngine({ pageCategory = 'all' } = {}) {
     const grid = document.getElementById('productGrid');
     if (grid) {
       grid.innerHTML = pageProducts.length
-        ? pageProducts.map(renderCard).join('')
+        ? pageProducts.map(p => renderCard(p, p.id === highlightId)).join('')
         : `<div class="no-results" style="grid-column:1/-1">
              <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
              <h3>No products found</h3>
@@ -179,6 +215,17 @@ export function initShopEngine({ pageCategory = 'all' } = {}) {
     updateResultsCount(filteredProducts.length);
     updatePaginationControls(totalPages);
     updateActiveFilterTags();
+
+    // First load only: bring the deep-linked product into view so an ad
+    // visitor sees it immediately instead of landing at the top of a
+    // 40-product category page.
+    if (highlightId !== null && !hasScrolledToHighlight) {
+      hasScrolledToHighlight = true;
+      const card = document.getElementById(`product-${highlightId}`);
+      if (card) {
+        setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
+      }
+    }
   }
 
   function updateResultsCount(total) {
