@@ -77,12 +77,12 @@ export function renderCard(p, isHighlighted = false) {
   const primeBadge   = p.prime     ? '<span class="prime-badge">prime</span>' : '';
   const discountBadge = discount   ? `<span class="discount-badge">${discount}</span>` : '';
   const highlightStyle = isHighlighted
-    ? ' style="outline:0.75px solid #ff5c8a;outline-offset:2px;border-radius:16px;position:relative;"'
+    ? ' style="outline:0.75px solid #ff5c8a;outline-offset:2px;border-radius:16px;position:relative;overflow:visible;"'
     : '';
   const highlightRibbon = isHighlighted
-    ? '<span style="position:absolute;top:-11px;left:0;right:0;width:fit-content;margin:0 auto;white-space:nowrap;'
+    ? '<span style="position:absolute;top:-11px;left:16px;white-space:nowrap;'
       + 'background:#ff5c8a;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;'
-      + 'border-radius:20px;z-index:2;box-shadow:0 1px 3px rgba(0,0,0,0.15);text-align:center;">You were looking for this</span>'
+      + 'border-radius:20px;z-index:3;box-shadow:0 1px 3px rgba(0,0,0,0.15);">You were looking for this</span>'
     : '';
 
   return `<div class="product-card" id="product-${p.id}"${highlightStyle}>
